@@ -4,13 +4,13 @@ This repository contains all of the code used for extracting and processing data
 
 ## The data
 
-**The data we used in our study is available on [Zenodo](https://zenodo.org/record/5498866#.YTtgmnVKhhE)**. This data includes everything we used in our study, including all of the results, measures, and the models trained throughout the methodology. More information about how the data is organized can be found in [the README file in the data/ directory](data/README.md).
+**The data we used in our study is available on [Zenodo](https://zenodo.org/record/5500268#.YTth-3VKhhE)**. This data includes everything we used in our study, including all of the results, measures, and the models trained throughout the methodology. More information about how the data is organized can be found in [the README file in the data/ directory](data/README.md).
 
 In this repository we provide mock datasets that simulate the ones used in our study. These datasets contain a small set of questions and duplicate pairs that can be used to test the code we provide.
 
 ### Benchmark datasets
 
-We provide three datasets that can be used for evaluating other duplicate detection methodologies and comparing with our results. **These datasets have been packaged separately and can also be found on [Zenodo](https://zenodo.org/record/5498866#.YTtgmnVKhhE).**
+We provide three datasets that can be used for evaluating other duplicate detection methodologies and comparing with our results. **These datasets have been packaged separately and can also be found on [Zenodo](https://zenodo.org/record/5500268#.YTth-3VKhhE).**
 
 There are two datasets focused on game development based on questions from [Stack Overflow](https://www.stackoverflow.com) and [the Game Development Stack Exchange](https://gamedev.stackexchange.com). The third dataset is comprised of five randomly selected samples of equal size collected from Stack Overflow. All of these datasets were extracted from the June 2021 [Stack Exchange Data Dump](https://archive.org/details/stackexchange). More information about the datasets is available in our paper.
 
