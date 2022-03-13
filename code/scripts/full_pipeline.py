@@ -73,5 +73,5 @@ if __name__ == "__main__":
     print(colored("Evaluating classifiers", "red"))
     candidate_performance(datasets, n_candidates, best_undersampling)
     cross_dataset_performance(
-        datasets, gamedev_datasets, so_samples, best_candidates, best_undersampling
+        datasets, best_candidates, best_undersampling
     )
