@@ -1,7 +1,7 @@
 import numpy as np
 import pandas as pd
 
-from utils import pahts, read, save
+from utils import paths, read, save
 from utils.models.hp_tuning import tune_train_set
 from utils.consts import datasets, n_candidates, undersampling_percentages
 

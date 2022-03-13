@@ -65,7 +65,7 @@ Please follow the following steps to execute the code from scratch, i.e., starti
 2. Replace the existing files in the [data/stackoverflow/raw/ directory](data/stackoverflow/raw) with the ones that you just downloaded. Do not alter the names of the files (keep them as Posts.xml and PostLinks.xml);
 3. Download the archive for the Game Development Stack Exchange from the data dump;
 4. Replace the existing archive in the [data/gamedev\_se/raw/ directory](data/gamedev_se/raw/) with the one that you just downloaded;
-5. Execute the command `python3 full_pipeline.py` while in the `code/` directory to run the whole pipeline from start to finish, or execute the scripts following the order described in [the README file in the code/ directory](code/README.md).
+5. Execute the command `python3 scripts/full_pipeline.py` while in the `code/` directory to run the whole pipeline from start to finish, or execute the scripts following the order described in [the README file in the code/ directory](code/README.md).
 
 #### Executing the code using our data
 
