@@ -149,22 +149,24 @@ def misclassified_dups(ds, c, p):
     dup_pairs = read(paths.dup_pairs(ds))
     
     missed = test.groupby('dup_id').apply(lambda df: select_misclassified(df, dup_pairs))
-    missed = missed.reset_index()
-    missed['has_dup'] = missed.has_dup.apply(bool)
-    
-    missed = missed.drop(columns=['level_1'])
-    
-    # adds URLs for easier analysis
-    if ds == 'gamedev_se':
-        to_url = lambda i: f'https://gamedev.stackexchange.com/questions/{i}/'
-    else:
-        to_url = lambda i: f'https://stackoverflow.com/questions/{i}/'
-    
-    for c in [c for c in missed.columns if c != 'has_dup']:
-        missed[c + '_url'] = missed[c].apply(to_url)
-    
-    if 'gamedev' not in ds:
-        ds = 'so_sample'
+
+    if len(missed) > 0:
+        missed = missed.reset_index()
+        missed['has_dup'] = missed.has_dup.apply(bool)
+        
+        missed = missed.drop(columns=['level_1'])
+        
+        # adds URLs for easier analysis
+        if ds == 'gamedev_se':
+            to_url = lambda i: f'https://gamedev.stackexchange.com/questions/{i}/'
+        else:
+            to_url = lambda i: f'https://stackoverflow.com/questions/{i}/'
+        
+        for c in [c for c in missed.columns if c != 'has_dup']:
+            missed[c + '_url'] = missed[c].apply(to_url)
+        
+        if 'gamedev' not in ds:
+            ds = 'so_sample'
         
     save(missed, paths.misclassified_duplicates(ds))
 
